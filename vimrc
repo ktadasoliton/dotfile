@@ -80,6 +80,34 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('tyru/caw.vim.git')
   call dein#add('myhere/vim-nodejs-complete')
 
+  call dein#add('andviro/flake8-vim')
+  call dein#add('cohama/vim-hier')
+  call dein#add('dannyob/quickfixstatus')
+
+  let g:PyFlakeOnWrite = 1
+  let g:PyFlakeDisableMessages = 'E501,E121,E303,E402'
+  let g:PyFlakeSings = 0
+  let g:PyFlakeDefaultComplexity = 'Q'
+  let g:PyFlakeCheckers = 'pep8,mccabe,pyflakes'
+  let g:PyFlakeDefaultComplexity = 10
+  let g:PyFlakeAggressive = 1
+
+  call dein#add('tell-k/vim-autopep8')
+  call dein#add('kana/vim-smartchr')
+  call dein#add('kana/vim-smartinput')
+  call dein#add('davidhalter/jedi-vim')
+
+  nnoremap [Show] <Nop>
+  nmap <Space>s [Show]
+  nnoremap [Show]hc  :<C-u>HierClear<CR>
+  nnoremap [Show]hs  :<C-u>HierStart<CR>
+  nnoremap [Show]hp  :<C-u>HierStop<CR>
+  nnoremap [Show]hu  :<C-u>HierUpdate<CR>
+
+  nnoremap <M-p>  :<C-u>cp<CR>
+  nnoremap <M-n>  :<C-u>cn<CR>
+
+
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
 
@@ -98,6 +126,8 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+
 
 set pastetoggle=<F10>
 
