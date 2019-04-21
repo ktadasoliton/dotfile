@@ -28,7 +28,6 @@ endif
 
 " Required:
 set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
-
 " Required:
 if dein#load_state('$HOME/.cache/dein')
   call dein#begin('$HOME/.cache/dein')

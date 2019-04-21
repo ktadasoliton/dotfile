@@ -1,4 +1,4 @@
-export PATH="/usr/bin:$PATH"
+#export PATH="/usr/bin:$PATH"
 
 export EDITOR=vim
 export LANG=ja_JP.UTF-8
@@ -109,6 +109,9 @@ if which peco > /dev/null; then
 else
     echo 'no peco'
 fi
+
+source ${HOME}/.zsh/modules/zsh-context-sensitive-alias/csa.zsh
+csa_init
 
 function my_context_func {
         local -a ctx
